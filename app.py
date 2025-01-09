@@ -99,8 +99,22 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_workout")
+@app.route("/add_workout", methods=["GET", "POST"])
 def add_workout():
+    if request.method == "POST":
+        is_urgent = "on" if request.form.get("is_urgent") else "off"
+        workout = {
+            "category_name": request.form.getlist("category_name"), #get or getlist, check this
+            "workout_name": request.form.get("workout_name"),
+            "workout_description": request.form.get("workout_description"),
+            "is_urgent": is_urgent,
+            "due_date": request.form.get("due_date"),
+            "created_by": session["user"]
+        }
+        mongo.db.tasks.insert_one(task)
+        flash("Workout Successfully Added")
+        return redirect(url_for('get_tasks'))
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_workout.html", categories=categories)
 

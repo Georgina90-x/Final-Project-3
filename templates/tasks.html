@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h3 class="light-pink-text text-darken-4 center-align">All Workouts</h3>
+
     <ul class="collapsible">
         {% for task in tasks %}
         <li>
             <div class="collapsible-header white-text light-pink darken-4 text-shadow">
                 <i class="fa-regular fa-circle-chevron-down"></i>
-                <strong>{{ task.task_name }}</strong> : {{ task.due_date }}
+                <strong>{{ task.workout_name }}</strong> : {{ task.due_date }}
                 {% if task.is_urgent == "on" %}
                     <i class="fa-solid fa-trophy light-pink-text text-lighten-2 tooltipped"
                     data-position="right" data-tooltip="Go For A PR!"></i>
@@ -14,7 +16,8 @@
             </div>
             <div class="collapsible-body">
                 <strong>{{ task.category_name }}</strong>
-                <p>{{ task.task_description }}</p>
+                <p>{{ task.workout_description }}</p>
+                <p><em>by: {{ task.created_by }}</em></p>
             </div>
         </li>
         {% endfor %}
