@@ -59,7 +59,7 @@ def login():
            
         if existing_user:
             #check hashed password matches user input
-            if check_password_hask(
+            if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
                     flash("Welcome, {}".format(
@@ -111,7 +111,7 @@ def add_workout():
             "due_date": request.form.get("due_date"),
             "created_by": session["user"]
         }
-        mongo.db.tasks.insert_one(task)
+        mongo.db.tasks.insert_one(workout)
         flash("Workout Successfully Added")
         return redirect(url_for('get_tasks'))
 

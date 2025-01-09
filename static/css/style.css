@@ -6,7 +6,7 @@
   
 
 body {
-    background-color: red;
+    background-color: #ffe6ee;
     font-family: "Special Elite"
 }
 
@@ -17,4 +17,37 @@ body {
 
 flashes h4 {
     line-height: 2;
+}
+
+.btn-large {
+    border-radius: 10px;
+}
+
+.card-panel {
+    border-radius: 10px;
+}
+
+.collapsible-header {
+    border-radius: 10px;
+    background-color: #ffb6c1;
+}
+
+.collapsible-body {
+    border-radius: 10px;
+}
+
+.nav-extended {
+    background-color: #de5d83;
+}
+
+.sidenav {
+    background-color: #de5d83;
+}
+
+.sidenav li {
+    color: white;
+}
+
+.sidenav li a {
+    color: white;
 }
