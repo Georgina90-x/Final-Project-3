@@ -139,6 +139,12 @@ def edit_workout(workout_id):
     return render_template("edit_workout.html", workout=workout, categories=categories)
 
 
+@app.route("/complete_workout/<workout_id>")
+def complete_workout(workout_id):
+    mongo.db.tasks.remove({"_id": ObjectId(workout_id)})
+    flash("Workout Successfully Completed")
+    return redirect(url_for("get_tasks"))
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

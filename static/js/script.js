@@ -10,6 +10,9 @@ $(document).ready(function(){
       i18n: {
         done: "Select"
       }
+    $( "#complete-workout" ).on( "click", function() {
+        alert( "Handler for `click` called." );
+      } );
     });
 
     validateMaterializeSelect();
