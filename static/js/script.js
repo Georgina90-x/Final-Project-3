@@ -9,10 +9,7 @@ $(document).ready(function(){
       showClearBtn: true,
       i18n: {
         done: "Select"
-      }
-    $( "#complete-workout" ).on( "click", function() {
-        alert( "Handler for `click` called." );
-      } );
+      },
     });
 
     validateMaterializeSelect();

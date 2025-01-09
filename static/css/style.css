@@ -68,3 +68,15 @@ nav .workout-title {
     margin: 5px;
     border-radius: 5px;
 }
+
+.card {
+    background-color: #de5d83;
+}
+
+.edit {
+    background-color: #ffb6c1;
+}
+
+.delete {
+    background-color: black;
+}
