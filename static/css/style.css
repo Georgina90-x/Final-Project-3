@@ -32,6 +32,12 @@ flashes h4 {
     background-color: #ffb6c1;
 }
 
+.collapsible-header .col strong {
+    margin: 5px;
+    line-height: 42px;
+}
+
+
 .collapsible-body {
     border-radius: 10px;
 }
@@ -50,4 +56,9 @@ flashes h4 {
 
 .sidenav li a {
     color: white;
+}
+
+.btn-small {
+    margin: 5px;
+    border-radius: 5px;
 }

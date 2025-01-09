@@ -7,12 +7,18 @@
         {% for task in tasks %}
         <li>
             <div class="collapsible-header white-text text-shadow">
-                <i class="fa-solid fa-circle-chevron-down"></i>
-                <strong>{{ task.workout_name }}</strong> : {{ task.due_date }}
-                {% if task.is_urgent == "on" %}
-                    <i class="fa-solid fa-trophy white-text tooltipped"
-                    data-position="right" data-tooltip="Go For A PR!"></i>
-                {% endif %}
+                <div class="col s3">
+                    <i class="fa-solid fa-circle-chevron-down"></i>
+                    <a href="" class="btn-small green accent-4">Done</a>
+                    <a href="" class="btn-small pink">Edit</a>
+                </div>
+                <div class="col s9">
+                    <strong>{{ task.workout_name }}</strong> : {{ task.due_date }}
+                        {% if task.is_urgent == "on" %}
+                            <i class="fa-solid fa-trophy white-text tooltipped"
+                            data-position="right" data-tooltip="Go For A PR!"></i>
+                        {% endif %}
+                </div>
             </div>
             <div class="collapsible-body">
                 <strong>{{ task.category_name }}</strong>
