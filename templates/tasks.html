@@ -10,7 +10,7 @@
                 <div class="col s3">
                     <i class="fa-solid fa-circle-chevron-down"></i>
                     <a href="" class="btn-small green accent-4">Done</a>
-                    <a href="" class="btn-small pink">Edit</a>
+                    <a href="{{ url_for('edit_workout', workout_id=task._id) }}" class="btn-small pink">Edit</a>
                 </div>
                 <div class="col s9">
                     <strong>{{ task.workout_name }}</strong> : {{ task.due_date }}
