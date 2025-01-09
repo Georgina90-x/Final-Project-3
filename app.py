@@ -121,6 +121,19 @@ def add_workout():
 
 @app.route("/edit_workout/<workout_id>", methods=["GET", "POST"])
 def edit_workout(workout_id):
+    if request.method == "POST":
+        is_urgent = "on" if request.form.get("is_urgent") else "off"
+        submit = {
+            "category_name": request.form.getlist("category_name"), #get or getlist, check this
+            "workout_name": request.form.get("workout_name"),
+            "workout_description": request.form.get("workout_description"),
+            "is_urgent": is_urgent,
+            "due_date": request.form.get("due_date"),
+            "created_by": session["user"]
+        }
+        mongo.db.tasks.update({"_id": ObjectId(workout_id)}, submit) #something wrong with this line?
+        flash("Workout Successfully Updated")
+
     workout = mongo.db.tasks.find_one({"_id": ObjectId(workout_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_workout.html", workout=workout, categories=categories)

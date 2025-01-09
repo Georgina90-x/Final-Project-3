@@ -21,6 +21,7 @@ flashes h4 {
 
 .btn-large {
     border-radius: 10px;
+    font-family: "Special Elite";
 }
 
 .card-panel {
@@ -40,6 +41,11 @@ flashes h4 {
 
 .collapsible-body {
     border-radius: 10px;
+}
+
+nav .workout-title {
+    position: absolute;
+    display: inline-block;
 }
 
 .nav-extended {
