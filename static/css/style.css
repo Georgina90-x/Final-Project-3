@@ -7,8 +7,15 @@
 
 body {
     background-color: #ffe6ee;
-    font-family: "Special Elite"
+    font-family: "Special Elite";
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
+ 
+main {
+    flex: 1 0 auto;
+  }
 
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -29,8 +36,13 @@ flashes h4 {
 }
 
 .collapsible-header {
+    display: flex;
     border-radius: 10px;
-    background-color: #ffb6c1;
+    background-color: #de5d83;
+    border-bottom: 1px solid;
+    padding: 8px;
+    line-height: 1.5;
+
 }
 
 .collapsible-header .col strong {
@@ -40,6 +52,10 @@ flashes h4 {
 
 
 .collapsible-body {
+    border-radius: 10px;
+}
+
+.collapsible li {
     border-radius: 10px;
 }
 
@@ -71,7 +87,18 @@ nav .workout-title {
 
 .card {
     background-color: #de5d83;
+    border-radius: 10px;
 }
+
+.icon {
+    color: #de5d83;
+}
+
+.login {
+    background-color: #de5d83;
+}
+
+
 
 .edit {
     background-color: #ffb6c1;
@@ -81,3 +108,12 @@ nav .workout-title {
 .delete {
     background-color: black;
 }
+
+.btn {
+    font-family: "Special Elite";
+}
+
+.page-footer {
+    background-color: #de5d83;
+}
+
