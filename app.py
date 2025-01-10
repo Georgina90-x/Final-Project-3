@@ -110,7 +110,7 @@ def add_workout():
     if request.method == "POST":
         is_urgent = "on" if request.form.get("is_urgent") else "off"
         workout = {
-            "category_name": request.form.getlist("category_name"), #get or getlist, check this
+            "category_name": request.form.getlist("category_name"),
             "workout_name": request.form.get("workout_name"),
             "workout_description": request.form.get("workout_description"),
             "is_urgent": is_urgent,
@@ -130,14 +130,14 @@ def edit_workout(workout_id):
     if request.method == "POST":
         is_urgent = "on" if request.form.get("is_urgent") else "off"
         submit = {
-            "category_name": request.form.getlist("category_name"), #get or getlist, check this
+            "category_name": request.form.getlist("category_name"),
             "workout_name": request.form.get("workout_name"),
             "workout_description": request.form.get("workout_description"),
             "is_urgent": is_urgent,
             "due_date": request.form.get("due_date"),
             "created_by": session["user"]
         }
-        mongo.db.tasks.update({"_id": ObjectId(workout_id)}, submit) #something wrong with this line?
+        mongo.db.tasks.update_one( {"_id": ObjectId(workout_id)}, {"$set": submit} )
         flash("Workout Successfully Updated")
 
     workout = mongo.db.tasks.find_one({"_id": ObjectId(workout_id)})
@@ -147,7 +147,7 @@ def edit_workout(workout_id):
 
 @app.route("/complete_workout/<workout_id>")
 def complete_workout(workout_id):
-    mongo.db.tasks.remove({"_id": ObjectId(workout_id)}) #something wrong with the line?
+    mongo.db.tasks.delete_one({"_id": ObjectId(workout_id)})
     flash("Workout Successfully Completed")
     return redirect(url_for("get_tasks"))
 
@@ -177,7 +177,7 @@ def edit_category(category_id):
         submit = {
             "category_name": request.form.get("category_name")
         }
-        mongo.db.categories.update({"_id": ObjectId(category_id)}, submit)
+        mongo.db.categories.update_one( {"_id": ObjectId(category_id)}, {"$set": submit} )
         flash("Category Successfully Updated")
         return redirect(url_for("get_categories"))
 
@@ -187,7 +187,7 @@ def edit_category(category_id):
 
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
-    mongo.db.categories.remove({"_id": ObjectId(category_id)})
+    mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted")
     return redirect(url_for("get_categories"))
 
