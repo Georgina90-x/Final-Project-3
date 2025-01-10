@@ -50,6 +50,14 @@ flashes h4 {
     line-height: 42px;
 }
 
+.edit {
+    background-color: black;
+}
+
+.delete {
+    background-color: blue;
+}
+
 
 .collapsible-body {
     border-radius: 10px;
@@ -100,13 +108,16 @@ nav .workout-title {
 
 
 
-.edit {
+.reset {
     background-color: #ffb6c1;
     color: black;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
-.delete {
+.search {
     background-color: black;
+    margin-bottom: 10px;
 }
 
 .btn {
