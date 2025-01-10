@@ -1,3 +1,12 @@
+:root {
+    --dark-pink: #de5d83;
+    --light-pink: #ffe6ee;
+    --light-green: #20b2aa;
+    --black: #000;
+    --white: #fff;
+}
+
+
 .special-elite-regular {
     font-family: "Special Elite", serif;
     font-weight: 400;
@@ -6,7 +15,7 @@
   
 
 body {
-    background-color: #ffe6ee;
+    background-color: var(--light-pink);
     font-family: "Special Elite";
     display: flex;
     min-height: 100vh;
@@ -38,7 +47,7 @@ flashes h4 {
 .collapsible-header {
     display: flex;
     border-radius: 10px;
-    background-color: #de5d83;
+    background-color: var(--dark-pink);
     border-bottom: 1px solid;
     padding: 8px;
     line-height: 1.5;
@@ -51,11 +60,11 @@ flashes h4 {
 }
 
 .edit {
-    background-color: black;
+    background-color: var(--black);
 }
 
 .delete {
-    background-color: blue;
+    background-color: var(--light-green);
 }
 
 
@@ -73,11 +82,11 @@ nav .workout-title {
 }
 
 .nav-extended {
-    background-color: #de5d83;
+    background-color: var(--dark-pink);
 }
 
 .sidenav {
-    background-color: #de5d83;
+    background-color: var(--dark-pink);
 }
 
 .sidenav li {
@@ -94,29 +103,33 @@ nav .workout-title {
 }
 
 .card {
-    background-color: #de5d83;
+    background-color: var(--dark-pink);
     border-radius: 10px;
 }
 
 .icon {
-    color: #de5d83;
+    color: var(--dark-pink);
 }
 
 .login {
-    background-color: #de5d83;
+    background-color: var(--dark-pink);
+}
+
+.user {
+    color: var(--dark-pink)
 }
 
 
 
 .reset {
-    background-color: #ffb6c1;
-    color: black;
+    background-color: var(--dark-pink);
+    color: white;
     margin-right: 10px;
     margin-bottom: 10px;
 }
 
 .search {
-    background-color: black;
+    background-color: var(--black);
     margin-bottom: 10px;
 }
 
@@ -125,6 +138,6 @@ nav .workout-title {
 }
 
 .page-footer {
-    background-color: #de5d83;
+    background-color: var(--dark-pink);
 }
 
