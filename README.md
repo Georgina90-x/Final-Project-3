@@ -182,6 +182,7 @@ The following are credits to various people and technologies that have directly 
 | [Heroku](https://www.heroku.com) | Deployment | Used to deploy the application. |
 | [MongoDB](https://www.mongodb.com) | Database | Used database to store, add, edit and update data. |
 | [Flaticon](https://www.flaticon.com/free-icons/sports-and-competition) | Favicon | Used as the favicon for the application. |
+| [Udacity](https://www.udacity.com/blog/2021/03/creating-an-html-404-error-web-page.html) | 404 Page | Used to create an Error 404 page. |
 
 ### Acknowledgements
 

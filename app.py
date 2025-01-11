@@ -44,9 +44,10 @@ def register():
 
         register = {
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
+            "password": generate_password_hash(request.form.get("password")),
             # put confirm password code here "confirm_password": check_password_hash(request.form.get("password"))
         }
+
         mongo.db.users.insert_one(register)
 
         # put the new user into 'session' cookie
@@ -84,6 +85,10 @@ def login():
             
     return render_template("login.html")
 
+
+def confirm_password():
+    if confirm_password != password:
+        flash("Passwords do not match!")
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
