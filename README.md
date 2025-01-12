@@ -98,7 +98,7 @@ I have used CSS `:root` variables to easily update the global colour scheme by c
 - As a new site user, I would like to know what the site is about, so that I understand what the site does.
 - As a new site user, I would like to search the database for exercises.
 - As a new site user, I would like to search the database for body parts (targeted exercises)
-- As a new site user, I would like to search categories that exist as well as add new categories.
+- As a new site user, I would like to search categories that exist as well as add new workouts.
 - As a new site user, I would like to have an overview of the upcoming workouts.
 
 ### Returning Site Users
