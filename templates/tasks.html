@@ -1,54 +1,48 @@
 {% extends "base.html" %}
 {% block content %}
-
 <h3 class="center-align">All Workouts</h3>
-
 <div class="row card-panel grey lighten-5">
-    <form action="{{ url_for('search') }}" method="POST" class="col s12">
-        <div class="row valign-wrapper center-align">
-            <div class="input-field col s12 m8">
-                <i class="fas fa-search prefix"></i>
-                <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                <label for="query">Search Workouts</label>
-            </div>
-            <div class="col s12 m4">
-                <a href="{{ url_for('get_tasks') }}" class="btn text-shadow reset">Reset</a>
-                <button type="submit" class="btn text-shadow search">
-                    <i class="fas fa-search left"></i> Search
-                </button>
-            </div>
-        </div>
-    </form>
+   <form action="{{ url_for('search') }}" method="POST" class="col s12">
+      <div class="row valign-wrapper center-align">
+         <div class="input-field col s12 m8">
+            <i class="fas fa-search prefix"></i>
+            <input type="text" name="query" id="query" minlength="3" class="validate" required>
+            <label for="query">Search Workouts</label>
+         </div>
+         <div class="col s12 m4">
+            <a href="{{ url_for('get_tasks') }}" class="btn text-shadow reset">Reset</a>
+            <button type="submit" class="btn text-shadow search">
+            <i class="fas fa-search left"></i> Search
+            </button>
+         </div>
+      </div>
+   </form>
 </div>
-    {% if tasks|length > 0 %}
-    <ul class="collapsible popout">
-        {% for task in tasks %}
-        <li>
-            <div class="collapsible-header white-text text-shadow">
-                <div class="col s3">
-                    <i class="fa-solid fa-circle-chevron-down"></i>
-                    {% if session.user|lower == task.created_by|lower or session.user|lower == "admin" %}
-                        <a href="{{ url_for('complete_workout', workout_id=task._id) }}" id="complete-workout" class="btn-small delete">Done</a>
-                        <a href="{{ url_for('edit_workout', workout_id=task._id) }}" class="btn-small edit">Edit</a>
-                    {% endif %}
-                </div>
-                <div class="col s9">
-                    <strong>{{ task.workout_name }}</strong> : {{ task.due_date }}
-                        {% if task.is_urgent == "on" %}
-                            <i class="fa-solid fa-trophy white-text tooltipped"
-                            data-position="right" data-tooltip="Go For A PR!"></i>
-                        {% endif %}
-                </div>
-            </div>
-            <div class="collapsible-body">
-                <strong>{{ task.category_name }}</strong>
-                <p>{{ task.workout_description }}</p>
-                <p><em>by: {{ task.created_by }}</em></p>
-            </div>
-        </li>
-        {% endfor %}
-    </ul>
-    {% else %}
-    <h3 class="pink-text center-align">Oops, No Results!</h3>
-    {% endif %}
+{% if tasks|length > 0 %}
+<ul class="collapsible popout">
+   {% for task in tasks %}
+   <li>
+      <div class="collapsible-header white-text text-shadow">
+         <div class="col s3">
+            <i class="fa-solid fa-circle-chevron-down"></i>
+            {% if session.user|lower == task.created_by|lower or session.user|lower == "admin" %}
+            <a href="{{ url_for('complete_workout', workout_id=task._id) }}" id="complete-workout" class="btn-small delete">Done</a>
+            <a href="{{ url_for('edit_workout', workout_id=task._id) }}" class="btn-small edit">Edit</a>
+            {% endif %}
+         </div>
+         <div class="col s9">
+            <strong>{{ task.workout_name }}</strong> : {{ task.due_date }}
+         </div>
+      </div>
+      <div class="collapsible-body">
+         <strong>{{ task.category_name }}</strong>
+         <p>{{ task.workout_description }}</p>
+         <p><em>by: {{ task.created_by }}</em></p>
+      </div>
+   </li>
+   {% endfor %}
+</ul>
+{% else %}
+<h3 class="pink-text center-align">Oops, No Results!</h3>
+{% endif %}
 {% endblock %}
