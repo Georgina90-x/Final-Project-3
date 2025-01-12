@@ -17,10 +17,6 @@ Return back to the [README.md](README.md) file.
 
 - [Responsiveness](#responsiveness)
 
-- [Accessibility](#accessibility)
-
-- [Lighthouse Audit](#lighthouse-audit)
-
 - [Defensive Programming](#defensive-programming)
 
 - [User Story Testing](#user-story-testing)
@@ -39,9 +35,15 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 | Page | W3C URL | Screenshot | Notes |
 | :---: | :---: | :---: | :---: |
-| 404| [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fboderg.github.io%2Fyour-weather%2F) | ![screenshot](documentation/validation/nu-html-checker-warnings.png) | Section lacks header h2-h6 warning |
-| add_category | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fboderg.github.io%2Fyour-weather%2F) | ![screenshot](documentation/validation/nu-html-checker-warnings.png) | Modal not allowed as child of body error |
-| add_workout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fboderg.github.io%2Fyour-weather%2F) | ![screenshot](image.png) | Edit |
+| add_category | [W3C](https://workout-project3-8b4d937e7508.herokuapp.com/add_category) | ![screenshot](documentation/validators/add_category.png) | Section lacks header h2-h6 warning |
+| add_workout| [W3C](https://workout-project3-8b4d937e7508.herokuapp.com/add_workout) | ![screenshot](documentation/validators/add_workout.png) | Section lacks header h2-h6 warning|
+| base | [W3C]() | ![screenshot](documentation/validators/base.png) | Section lacks header h2-h6 warning |
+| get_categories | [W3C](https://workout-project3-8b4d937e7508.herokuapp.com/get_categories) | ![screenshot](documentation/validators/categories.png) | Section lacks header h2-h6 warning |
+| edit_category | [W3C](https://workout-project3-8b4d937e7508.herokuapp.com/edit_category) | ![screenshot](documentation/validators/edit_category.png) | Section lacks header h2-h6 warning |
+| edit_workout| [W3C](https://workout-project3-8b4d937e7508.herokuapp.com/edit_workout) | ![screenshot](documentation/validators/edit_workout.png) | Section lacks header h2-h6 warning |
+| login | [W3C](https://workout-project3-8b4d937e7508.herokuapp.com/login) | ![screenshot](documentation/validators/login.png) | Section lacks header h2-h6 warning |
+| register | [W3C](https://workout-project3-8b4d937e7508.herokuapp.com/register) | ![screenshot](documentation/validators/register.png) | Section lacks header h2-h6 warning |
+| tasks | [W3C](https://workout-project3-8b4d937e7508.herokuapp.com/get_tasks) | ![screenshot](documentation/validators/tasks.png) | Section lacks header h2-h6 warning |
 
 ### CSS
 
@@ -49,7 +51,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | File | Jigsaw URL | Screenshot | Notes |
 | :---: | :---: | :---: | :---: |
-| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fboderg.github.io%2Fyour-weather%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/validation/w3c-css-validator-results.png) | Pass: No Errors |
+| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator) | ![screenshot](documentation/validators/css.png) | Pass: No Errors |
 
 ### JavaScript
 
@@ -57,20 +59,18 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 | File | Screenshot | Notes |
 | :---: | :---: | :---: |
-| main.js | ![screenshot](documentation/validation/jshint-validation-warnings.png) | Missing semicolons |
-| main.js | ![screenshot](documentation/validation/jshint-validation-pass.png) | Pass: No Errors |
+| script.js | ![screenshot](documentation/validators/javascript.png) | 	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). As this is direct code copied and pasted from Materialize, I did not change it. |
 
 ## Browser Compatibility
 
 I have tested Your Weather on the following browsers to check for compatibility issues.
 
-| Browser | Main | About | Displayed °C | Displayed °F | Notes |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| [Chrome](https://www.google.com/chrome) | ![screenshot](documentation/browsers/chrome/chrome-main.png) | ![screenshot](documentation/browsers/chrome/chrome-modal.png) | ![screenshot](documentation/browsers/chrome/chrome-displayed-c.png) | ![screenshot](documentation/browsers/chrome/chrome-displayed-f.png) | Works as expected |
-| [Firefox (Developer Edition)](https://www.mozilla.org/firefox/developer) | ![screenshot](documentation/browsers/firefox-dev/firefox-dev-main.png) | ![screenshot](documentation/browsers/firefox-dev/firefox-dev-modal.png) | ![screenshot](documentation/browsers/firefox-dev/firefox-dev-displayed-c.png) | ![screenshot](documentation/browsers/firefox-dev/firefox-dev-displayed-f.png) | Works as expected |
-| [Edge](https://www.microsoft.com/edge)| ![screenshot](documentation/browsers/edge/edge-main.png) | ![screenshot](documentation/browsers/edge/edge-modal.png) | ![screenshot](documentation/browsers/edge/edge-displayed-c.png) | ![screenshot](documentation/browsers/edge/edge-displayed-f.png) | Works as expected |
-| [Safari](https://support.apple.com/downloads/safari) | ![screenshot](documentation/browsers/safari/safari-main.png) | ![screenshot](documentation/browsers/safari/safari-modal.png) | ![screenshot](documentation/browsers/safari/safari-displayed-c.png) | ![screenshot](documentation/browsers/safari/safari-displayed-f.png) | Works as expected |
-| [Brave](https://brave.com/download) | ![screenshot](documentation/browsers/brave/brave-main.png) | ![screenshot](documentation/browsers/brave/brave-modal.png) | ![screenshot](documentation/browsers/brave/brave-displayed-c.png) | ![screenshot](documentation/browsers/brave/brave-displayed-f.png) | Works as expected |
+| Browser | Main | Login | Register | New Workout | Categories | Edit Category | Profile |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| [Chrome](https://www.google.com/chrome) | ![screenshot](documentation/browsers/chrome/chrome-home.png) | ![screenshot](documentation/browsers/chrome/chrome-login.png) | ![screenshot](documentation/browsers/chrome/chrome-register.png) | ![screenshot](documentation/browsers/chrome/chrome-new-workout.png) | ![screenshot](documentation/browsers/chrome/chrome-categories.png) | ![screenshot](documentation/browsers/chrome/chrome-edit-category.png) | ![screenshot](documentation/browsers/chrome/chrome-profile.png) | Works as expected |
+| [Firefox](https://www.google.com/firefox) | ![screenshot](documentation/browsers/firefox/firefox-home.png) | ![screenshot](documentation/browsers/firefox/firefox-login.png) | ![screenshot](documentation/browsers/firefox/firefox-register.png) | ![screenshot](documentation/browsers/firefox/firefox-new-workout.png) | ![screenshot](documentation/browsers/firefox/firefox-categories.png) | ![screenshot](documentation/browsers/firefox/firefox-edit-category.png) | ![screenshot](documentation/browsers/firefox/firefox-profile.png) | Works as expected |
+| [Edge](https://www.microsoft.com/en-us/edge/?form=MA13FJ) | ![screenshot](documentation/browsers/edge/edge-home.png) | ![screenshot](documentation/browsers/edge/edge-login.png) | ![screenshot](documentation/browsers/edge/edge-register.png) | ![screenshot](documentation/browsers/edge/edge-new-workout.png) | ![screenshot](documentation/browsers/edge/edge-categories.png) | ![screenshot](documentation/browsers/edge/edge-edit-category.png) | ![screenshot](documentation/browsers/edge/edge-profile.png) | Works as expected |
+| [Safari](https://www.apple.com/safari/) | ![screenshot](documentation/browsers/safari/safari-home.png) | ![screenshot](documentation/browsers/safari/safari-login.png) | ![screenshot](documentation/browsers/safari/safari-register.png) | ![screenshot](documentation/browsers/safari/safari-new-workout.png) | ![screenshot](documentation/browsers/safari/safari-categories.png) | ![screenshot](documentation/browsers/safari/safari-edit-category.png) | ![screenshot](documentation/browsers/safari/safari-profile.png) | Works as expected |
 
 ## Responsiveness
 
@@ -79,37 +79,15 @@ I have tested my deployed project on multiple devices to check for responsivenes
 <details>
 <summary>Click for report</summary>
 
-| Device | Main | About | Displayed °C | Displayed °F | Notes |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| Mobile (DevTools - iPhone SE) | ![screenshot](documentation/responsiveness/mobile-dev-tools/mobile-dev-main.png) | ![screenshot](documentation/responsiveness/mobile-dev-tools/mobile-dev-modal.png) | ![screenshot](documentation/responsiveness/mobile-dev-tools/mobile-dev-c.png) | ![screenshot](documentation/responsiveness/mobile-dev-tools/mobile-dev-f.png) | Chrome dev tools were used, the site works as expected |
-| Tablet (DevTools - iPad Air) | ![screenshot](documentation/responsiveness/tablet-dev-tools/tablet-main.png) | ![screenshot](documentation/responsiveness/tablet-dev-tools/tablet-modal.png) | ![screenshot](documentation/responsiveness/tablet-dev-tools/tablet-c.png) | ![screenshot](documentation/responsiveness/tablet-dev-tools/tablet-f.png) | Firefox dev tools were used, the site works as expected |
-| 15" Laptop Mdpi | ![screenshot](documentation/responsiveness/15-inch-laptop/mdpi/laptop-main.png) | ![screenshot](documentation/responsiveness/15-inch-laptop/mdpi/laptop-modal.png) | ![screenshot](documentation/responsiveness/15-inch-laptop/mdpi/laptop-c.png) | ![screenshot](documentation/responsiveness/15-inch-laptop/mdpi/laptop-f.png) | Firefox was used, the site works as expected |
-| 15" Laptop Hdpi | ![screenshot](documentation/responsiveness/15-inch-laptop/hdpi/laptop-main1.png) | ![screenshot](documentation/responsiveness/15-inch-laptop/hdpi/laptop-modal1.png) | ![screenshot](documentation/responsiveness/15-inch-laptop/hdpi/laptop-c1.png) | ![screenshot](documentation/responsiveness/15-inch-laptop/hdpi/laptop-f1.png) | Firefox (Developer Edition) was used, the site works as expected |
-| 20" Desktop 1080p | ![screenshot](documentation/responsiveness/20-inch-desktop/safari-main.png) | ![screenshot](documentation/responsiveness/20-inch-desktop/safari-modal.png) | ![screenshot](documentation/responsiveness/20-inch-desktop/safari-displayed-c.png) | ![screenshot](documentation/responsiveness/20-inch-desktop/safari-displayed-f.png) | Safari was used, the site works as expected |
-| 27" Desktop 1080p | ![screenshot](documentation/responsiveness/27-inch-desktop/edge-main.png) | ![screenshot](documentation/responsiveness/27-inch-desktop/edge-modal.png) | ![screenshot](documentation/responsiveness/27-inch-desktop/edge-displayed-c.png) | ![screenshot](documentation/responsiveness/27-inch-desktop/edge-displayed-f.png) | Edge was used, the site works as expected |
-| 34" XL Monitor 1440p Ultrawide | ![screenshot](documentation/responsiveness/34-inch-desktop/34-desktop-main.png) | ![screenshot](documentation/responsiveness/34-inch-desktop/34-desktop-modal.png) | ![screenshot](documentation/responsiveness/34-inch-desktop/34-desktop-c.png) | ![screenshot](documentation/responsiveness/34-inch-desktop/34-desktop-f.png) | Firefox was used, the site works as expected |
-| Samsung Galaxy S10 Plus | ![screenshot](documentation/responsiveness/galaxy-s10/chrome-main.jpg) | ![screenshot](documentation/responsiveness/galaxy-s10/firefox-dev-modal.jpg) | ![screenshot](documentation/responsiveness/galaxy-s10/edge-c.jpg) | ![screenshot](documentation/responsiveness/galaxy-s10/brave-forecast-f.jpg) | Chrome, Firefox (Developer Edition), Edge and Brave browsers were used, the site works as expected |
+| Device | Main | Login | Register| New Workout | Categories | Edit_Category | Profile |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Mobile (iPhone 15 Pro) | ![screenshot](documentation/responsiveness/iphone/iphone-home.PNG) | ![screenshot](documentation/responsiveness/iphone/iphone-login.PNG) | ![screenshot](documentation/responsiveness/iphone/iphone-register.PNG) | ![screenshot](documentation/responsiveness/iphone/iphone-add-workout.PNG) | ![screenshot](documentation/responsiveness/iphone/iphone-categories.PNG) | ![screenshot](documentation/responsiveness/iphone/iphone-edit-category.PNG) | ![screenshot](documentation/responsiveness/iphone/iphone-profile.PNG) | Some styling issues, but nothing that affects function. |
+| Tablet (iPad Air) | ![screenshot](documentation/responsiveness/ipad/ipad-home.PNG) | ![screenshot](documentation/responsiveness/ipad/ipad-login.PNG) | ![screenshot](documentation/responsiveness/ipad/ipad-register.PNG) | ![screenshot](documentation/responsiveness/ipad/ipad-add-workout.PNG) | ![screenshot](documentation/responsiveness/ipad/ipad-categories.PNG) | ![screenshot](documentation/responsiveness/ipad/ipad-edit-category.PNG) | ![screenshot](documentation/responsiveness/ipad/ipad-profile.PNG) | No Issues |
+| 13" Macbook Pro| ![screenshot](documentation/responsiveness/macbook/macbook-home.png) | ![screenshot](documentation/responsiveness/macbook/macbook-login.png) | ![screenshot](documentation/responsiveness/macbook/macbook-register.png) | ![screenshot](documentation/responsiveness/macbook/macbook-new-workout.png) | ![screenshot](documentation/responsiveness/macbook/macbook-categories.png) | ![screenshot](documentation/responsiveness/macbook/macbook-edit-category.png) | ![screenshot](documentation/responsiveness/macbook/macbook-profile.png) | No Issues |
+| 15" Windows Laptop | ![screenshot]() | ![screenshot]() | ![screenshot]() | ![screenshot]() | ![screenshot]() | ![screenshot]() | ![screenshot]() | Notes |
+| Android Phone | ![screenshot]() | ![screenshot]() | ![screenshot]() | ![screenshot]() | ![screenshot]() | ![screenshot]() | ![screenshot]() | Notes |
 
 </details>
-
-## Accessibility
-
-I have tested my deployed project using the [WAVE](https://wave.webaim.org/) web accessibility evaluation tool to check for any accessibility issues.
-
-| Page | Summary | Details | Contrast | Notes |
-| :---: | :---: | :---: | :---: | :---: |
-| Main | ![screenshot](documentation/wave/wave-summary.png) | ![screenshot](documentation/wave/wave-details.png) | ![screenshot](documentation/wave/wave-contrast.png) | A couple of minor notes about one label being missing from the search input field and a label missing from the search button, these were intentional as both items are titled and the input field has a placeholder. |
-
-## Lighthouse Audit
-
-I have tested my deployed project using the Lighthouse Audit tool to check for any major issues.
-
-| Page | Mobile | Desktop | Notes |
-| :---: | :---: | :---: | :---: |
-| Main | ![screenshot](documentation/lighthouse/lighthouse-audit-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-audit-desktop.png) | Few minor warnings about load times on mobile |
-
-- To improve the SEO score I have added a description meta tag to the HTML file.
-- To improve the accessibility score I added titles to the buttons in the html file.
 
 ## Defensive Programming
 
@@ -121,19 +99,23 @@ Defensive programming was manually tested with the below user acceptance testing
 | Page | Expectation | Test | Result | Fix | Screenshot |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | Main | | | | | |
-| | About Your Weather is expected to open a modal with information about the site when the user clicks on the About Your Weather button. | Tested the feature by clicking About Your Weather. | The feature behaved as expected, and it opened the modal. | Test concluded and passed. | ![screenshot](documentation/defensive/modal-open.png) |
-| | An alert prompting the entry of a town or city name is expected to appear when the user clicks the search button while the input field is empty. | Tested the feature by clicking the search button with an empty input field | The feature behaved as expected, and activated an alert prompt. | Test concluded and passed. | ![screenshot](documentation/defensive/alert-prompt.png) |
-| | The site is expected to fetch and display the weather data when the input field is populated and the search button is clicked. | Tested the feature by entering various city and town names and clicking the search button. | The feature behaved as expected. | Test concluded and passed. | ![screenshot](documentation/defensive/fetched-weather.png) |
-| | The site is expected to fetch and display the weather data when the input field is populated and the 'Enter' key is pressed. | Tested the feature by entering various city and town names and pressing the 'Enter' key. | The feature did not respond to the 'Enter' key being pressed. | I added a keydown event listener for the 'Enter' key that would call the getWeather() function when pressed. | ![screenshot](documentation/defensive/enter-pressed.png) |
-| | The Temperature toggle is expected to switch the weather data between metric and imperial measurements by calling the relevant api data. | Tested the feature by clicking on the toggle switch. | The feature behaved as expected. | Test concluded and passed | ![screenshot](documentation/defensive/metric.png) ![screenshot](documentation/defensive/imperial.png) |
-| | The GitHub link in the footer is expected to open my main GitHub page in a new browser tab. | Tested the feature by clicking the link. | The feature behaved as expected. | Test concluded and passed. | ![screenshot](documentation/defensive/my-github.png) |
-| About Modal | | | | | |
-| | The GitHub repository link is expected to open the sites GitHub repository in a new browser tab when the user clicks the link. | Tested the feature by clicking the link. | The feature behaved as expected, and opened the sites GitHub repository on a new tab. | Test concluded and passed. | ![screenshot](documentation/defensive/repo-link-test.png) |
-| | The Modal is expected to close when the user clicks on the 'x'. | Tested the feature by clciking on the 'x'. | The feature behaved as expected. | Test concluded and passed. | ![screenshot](documentation/defensive/modal-close.png) |
-| |  The Modal is expected to close when the user clicks away from the modal. | Tested the feature by clicking away from the modal. | The feature behaved as expected. | Test concluded and passed. | ![screenshot](documentation/defensive/modal-close.png) |
-| 404 Page | | | | | |
-| | The 404 page is expected to appear if an incorrect page url is entered. | Tested the feature by enetering an extended url. | The feature behaved as expected. | Test concluded and passed. | ![screenshot](documentation/defensive/404-page.png) |
-| | The Home button on the 404 page is expected to return the user to the main page. | Tested by clicking the Home button. | The feature did not return to the main page. | I fixed this by changing the link from internal to external and the feature now returns to the main page. | ![screenshot](documentation/defensive/return-main-error.png) ![screenshot](documentation/defensive/return-main.png) |
+| | About Your Weather is expected to open a modal with information about the site when the user clicks on the About Your Weather button. | Tested the feature by clicking About Your Weather. | The feature behaved as expected, and it opened the modal. | Test concluded and passed. | ![screenshot]() |
+| Login | | | | | |
+| | About Your Weather is expected to open a modal with information about the site when the user clicks on the About Your Weather button. | Tested the feature by clicking About Your Weather. | The feature behaved as expected, and it opened the modal. | Test concluded and passed. | ![screenshot]() |
+| Register | | | | | |
+| | About Your Weather is expected to open a modal with information about the site when the user clicks on the About Your Weather button. | Tested the feature by clicking About Your Weather. | The feature behaved as expected, and it opened the modal. | Test concluded and passed. | ![screenshot]() |
+| New Workout | | | | | |
+| | About Your Weather is expected to open a modal with information about the site when the user clicks on the About Your Weather button. | Tested the feature by clicking About Your Weather. | The feature behaved as expected, and it opened the modal. | Test concluded and passed. | ![screenshot]() |
+| Edit Workout | | | | | |
+| | About Your Weather is expected to open a modal with information about the site when the user clicks on the About Your Weather button. | Tested the feature by clicking About Your Weather. | The feature behaved as expected, and it opened the modal. | Test concluded and passed. | ![screenshot]() |
+| Categories | | | | | |
+| | About Your Weather is expected to open a modal with information about the site when the user clicks on the About Your Weather button. | Tested the feature by clicking About Your Weather. | The feature behaved as expected, and it opened the modal. | Test concluded and passed. | ![screenshot]() |
+| Edit Categories | | | | | |
+| | About Your Weather is expected to open a modal with information about the site when the user clicks on the About Your Weather button. | Tested the feature by clicking About Your Weather. | The feature behaved as expected, and it opened the modal. | Test concluded and passed. | ![screenshot]() |
+| Search | | | | | |
+| | About Your Weather is expected to open a modal with information about the site when the user clicks on the About Your Weather button. | Tested the feature by clicking About Your Weather. | The feature behaved as expected, and it opened the modal. | Test concluded and passed. | ![screenshot]() |
+
+
 
 </details>
 
@@ -142,12 +124,14 @@ Defensive programming was manually tested with the below user acceptance testing
 | User Story | Screenshot |
 | :---: | :---: |
 | As a new site user, I would like to know what the site is about, so that I understand what the site does. | ![screenshot](documentation/features/modal.png) |
-| As a new site user, I would like to search my local area, so that I can see what the weather is today. | ![screenshot](documentation/features/input-box.png) ![screenshot](documentation/features/search-button.png) |
-| As a new site user, I would like to search my local area, so that I can see the forecast for the next few days. | ![screenshot](documentation/features/input-box.png) ![screenshot](documentation/features/search-button.png) |
-| As a new site user, I would like to search other areas, so that I can see the weather in those areas. | ![screenshot](documentation/features/input-box.png) ![screenshot](documentation/features/search-button.png) |
-| As a new site user, I would like to search other areas, so that I can se the forecast for those areas. | ![screenshot](documentation/features/input-box.png) ![screenshot](documentation/features/search-button.png) |
-| As a returning site user, I would like to search a place I am visiting, so that I can see the weather and plan accordingly. | ![screenshot](documentation/features/input-box.png) ![screenshot](documentation/features/search-button.png) |
-| As a returning site user, I would like to be able to change the format, so that I can view the weather in my native measurements. | ![screenshot](documentation/features/temp-toggle-f.png) ![screenshot](documentation/features/temp-toggle-c.png) |
+| - As a new site user, I would like to search the database for exercises.| ![screenshot]() ![screenshot]() |
+| As a new site user, I would like to search the database for body parts (targeted exercises) | ![screenshot]() ![screenshot]() |
+| As a new site user, I would like to search categories that exist as well as add new categories. | ![screenshot]() ![screenshot]() |
+| - As a new site user, I would like to have an overview of the upcoming workouts. | ![screenshot]() ![screenshot]() |
+| - As a returning site user, I would like to search the database for specific exercises. | ![screenshot]() ![screenshot]() |
+| - As a returning site user, I would like to be able to change/edit/delete the workouts I have added. | ![screenshot]() ![screenshot]() |
+| - As a returning site user, I would like to be able to sign in with ease. | ![screenshot]() ![screenshot]() |
+
 
 ## Bugs
 
@@ -171,21 +155,6 @@ The following are bugs that I have come across while creating the Your Weather s
 | ![screenshot](documentation/bugs/sunrise-set-gmt-date.png) | ![screenshot](documentation/bugs/sunrise-set-timezone-offset.png)
 
 - To fix this I added a timezone offset and formatted the data to display only the time for the timezone of the city requested.
-
-***
-
-- Mixed content - This error prevented the deployed site from loading the weather data from the api.
-- To fix this error I found he fix on MDN web docs and I edited all links that displayed as http:// to https://.
-
-***
-
-- Uncaught in promise error (network error) - This error was preventing the deployed site from fetching any data from the api but only while using Firefox, it was fine on other browsers.
-- To fix this error I tried adding a catch to the geolocation api fetch but this broke the site. After a little research it turned out that by turning off the ad blocker extension I had on firefox the api was then able to fetch the data.
-
-***
-
-- Favicon would not display on GitHub pages deployed site, but would show locally.
-- To fix this, I first tried changing the image, then changing the image name, but these did not fix the issue and after a little research it was noted that the link to where the image was located needed to have a '.' at the start of the link.
 
 ## Unfixed Bugs
 

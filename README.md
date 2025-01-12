@@ -137,6 +137,11 @@ I have used CSS `:root` variables to easily update the global colour scheme by c
   - A feature that will group users together (eg. an exercise class) so they can access specific content.
 - Personal Trainer User Accounts
   - A feature for Personal Trainers to tailor specific programs for their clients/groups.
+- Modals to open when a user clicks to delete a workout.
+  - A feature to prevent users from accidentally deleting a workout. (Attempted to code this into the application but would not function correctly.)
+- A switch for users to state whether they are going for a PR.
+  - A feature so that users can see if they are planning on attempting a PR. (Attempted to code this into the application but would not function correctly.)
+
 
 ## Tools & Technologies Used
 
