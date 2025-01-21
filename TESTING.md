@@ -23,6 +23,8 @@ Return back to the [README.md](README.md) file.
 
 - [User Story Testing](#user-story-testing)
 
+- [Bugs](#bugs)
+
 </details>
 
 ## Code Validation
@@ -140,4 +142,35 @@ Defensive programming was manually tested with the below user acceptance testing
 | - As a returning site user, I would like to search the database for specific exercises. | ![screenshot](documentation/users/user-search-exercise.png) |
 | - As a returning site user, I would like to be able to change/edit/delete the workouts I have added. | ![screenshot](documentation/users/user-edit-workout.png) |
 | - As a returning site user, I would like to be able to sign in with ease. | ![screenshot](documentation/users/user-signin.png) |
+
+## Bugs
+
+The following are bugs that I have come across while creating the Workout site.
+
+- Multiple selection does not autofill. - When editing a workout, the category dropdown should autofill however it did not work.
+
+| Original image | Bug fixed image |
+| :---: | :---: |
+| ![screenshot](documentation/bugs/edit-workout-no-prefill.png) | ![screenshot](documentation/bugs/edit-workout-prefill-fix.png) |
+
+- To fix this I removed the 'multiple' from the select boxes and had it as a 'choose one' category. This is a temporary fix as workouts often combine multiple categories and users may find this frustrating.
+***
+
+- Issues with modals for delete confirmations. - When pressing the delete/done buttons a modal should appear for the user to confirm they want to delete the record or cancel. I had issues with this code working, as it would effect the function of the rest of the application.
+
+| Original image | Bug fixed image |
+| :---: | :---: |
+| ![screenshot]() | ![screenshot]() |
+
+- To fix this I persevered trying to find the right code that would get the modal working and allowing a confirmation to take place to avoid accidental deletions.
+***
+
+## Unfixed Bugs
+
+| Error | Screenshot | Description |
+| :---: | :---: | :---: |
+| Permission policy error - Chrome devtools gives this google floc warning on the version that I am using. It appears to be a deprecated trial for data collection instead of using cookies. | ![screenshot](documentation/bugs/google-floc-warning.png) | I was unsuccessful at fixing this, however this does not affect the operation of the site and this trial operation is also blocked by GitHub as it breaks privacy policy. |
+| The 404 page does not pick up the css if an error is created on the end of a .html url. | e.g. boderg.github.io/your-weather/index.html/data ![screenshot](documentation/bugs/html-error.png) | I was unable to fix this error but the 404 error does appear and the link button does work to return to the main page. I feel this is acceptable as it is an unlikely scenario to enter a url in this fashion. |
+
+There are no remaining bugs that I am aware of.
 
