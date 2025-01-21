@@ -17,6 +17,8 @@ Return back to the [README.md](README.md) file.
 
 - [Responsiveness](#responsiveness)
 
+- [Accessibility](#accessibility)
+
 - [Defensive Programming](#defensive-programming)
 
 - [User Story Testing](#user-story-testing)
@@ -85,6 +87,14 @@ I have tested my deployed project on multiple devices to check for responsivenes
 | Android Phone | ![screenshot](documentation/responsiveness/android/android-home.png) | ![screenshot](documentation/responsiveness/android/android-login.png) | ![screenshot](documentation/responsiveness/android/android-register.png) | ![screenshot](documentation/responsiveness/android/android-add-workout.png) | ![screenshot]() | ![screenshot](documentation/responsiveness/android/android-edit-workout.png) | ![screenshot](documentation/responsiveness/android/android-profile.png) | User was not an admin so did not have access to categories. No Issues reported. |
 
 </details>
+
+## Accessibility
+
+I have tested my deployed project using the [WAVE](https://wave.webaim.org/) web accessibility evaluation tool to check for any accessibility issues.
+
+| Page | Summary | Details | Contrast | Notes |
+| :---: | :---: | :---: | :---: | :---: |
+| Main | ![screenshot](documentation/accessibility/wave-accessibility-original.png) | ![screenshot](documentation/accessibility/accessibility-home.png) | ![screenshot](documentation/accessibility/wave-accessibility-new.png) | There was a clear issue with contrast of colour scheme to the application. I simply updated the main colour from pink to a darker pink. During retest the contrast errors were fixed with the exception of the search bar font, which is an intentional grey colour in the search bar. The empty link is an intentional link for Home(get_tasks). As the application uses Jinja, there is not a usual DOC! Language for every page.  |
 
 ## Defensive Programming
 

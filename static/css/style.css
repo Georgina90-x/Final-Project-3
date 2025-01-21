@@ -1,5 +1,5 @@
 :root {
-    --dark-pink: #de5d83;
+    --dark-pink: #880e4f;
     --light-pink: #ffe6ee;
     --light-green: #20b2aa;
     --black: #000;
@@ -27,7 +27,7 @@ main {
   }
 
 .text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.631);
 
 }
 
@@ -66,6 +66,7 @@ main {
 
 .collapsible-body {
     border-radius: 10px;
+    background-color: var(--white);
 }
 
 .collapsible li {
