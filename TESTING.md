@@ -156,11 +156,11 @@ The following are bugs that I have come across while creating the Workout site.
 - To fix this I removed the 'multiple' from the select boxes and had it as a 'choose one' category. This is a temporary fix as workouts often combine multiple categories and users may find this frustrating.
 ***
 
-- Issues with modals for delete confirmations. - When pressing the delete/done buttons a modal should appear for the user to confirm they want to delete the record or cancel. I had issues with this code working, as it would effect the function of the rest of the application.
+- Issues with modals for delete confirmations. - When pressing the delete/done buttons a modal should appear for the user to confirm they want to delete the record or cancel. This content was not covered in the provided course content so I had to figure out how to get the code working with my existing code. When I would put the code in, it would affect the entire application from working.
 
 | Original image | Bug fixed image |
 | :---: | :---: |
-| ![screenshot]() | ![screenshot]() |
+| ![screenshot](documentation/bugs/done-workout.png) | ![screenshot]() |
 
 - To fix this I persevered trying to find the right code that would get the modal working and allowing a confirmation to take place to avoid accidental deletions.
 ***

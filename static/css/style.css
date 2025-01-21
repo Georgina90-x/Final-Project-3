@@ -6,14 +6,14 @@
     --white: #fff;
 }
 
-
+/* font for the entire application */
 .special-elite-regular {
     font-family: "Special Elite", serif;
     font-weight: 400;
     font-style: normal;
   }
   
-
+/* styles for the main body of the application */
 body {
     background-color: var(--light-pink);
     font-family: "Special Elite";
@@ -35,6 +35,11 @@ main {
     line-height: 2;
 }
 
+.page-footer {
+    background-color: var(--dark-pink);
+}
+
+/* styles for the buttons */
 .btn-small {
     margin: 5px;
     border-radius: 5px;
@@ -45,7 +50,42 @@ main {
     font-family: "Special Elite";
 }
 
+.edit {
+    background-color: var(--black);
+}
+
+.delete {
+    background-color: var(--light-green);
+}
+
+.login {
+    background-color: var(--dark-pink);
+}
+
+.reset {
+    background-color: var(--dark-pink);
+    color: white;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.search {
+    background-color: var(--black);
+    margin-bottom: 10px;
+}
+
+.btn {
+    font-family: "Special Elite";
+}
+
+/* styles for the card panels */
+
 .card-panel {
+    border-radius: 10px;
+}
+
+.card {
+    background-color: var(--dark-pink);
     border-radius: 10px;
 }
 
@@ -73,14 +113,7 @@ main {
     border-radius: 10px;
 }
 
-.edit {
-    background-color: var(--black);
-}
-
-.delete {
-    background-color: var(--light-green);
-}
-
+/* styles for the nav bar and sidebar menus */
 nav .workout-title {
     position: absolute;
     display: inline-block;
@@ -102,36 +135,7 @@ nav .workout-title {
     color: white;
 }
 
-.card {
-    background-color: var(--dark-pink);
-    border-radius: 10px;
-}
-
+/* styles for the icons on the application */
 .icon, .user {
     color: var(--dark-pink);
 }
-
-.login {
-    background-color: var(--dark-pink);
-}
-
-.reset {
-    background-color: var(--dark-pink);
-    color: white;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-.search {
-    background-color: var(--black);
-    margin-bottom: 10px;
-}
-
-.btn {
-    font-family: "Special Elite";
-}
-
-.page-footer {
-    background-color: var(--dark-pink);
-}
-
