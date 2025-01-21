@@ -16,14 +16,14 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-
+# creates a list on the homepage of all workout records in db
 @app.route("/")
 @app.route("/get_tasks")
 def get_tasks():
     tasks = list(mongo.db.tasks.find())
     return render_template("tasks.html", tasks=tasks)
 
-
+# search function that retrieves data records using keywords searched 
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -31,6 +31,7 @@ def search():
     return render_template("tasks.html", tasks=tasks)
 
 
+# register function, checks against existing users in db and creates a new user when submitted
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -58,6 +59,7 @@ def register():
     return render_template("register.html")
 
 
+# login function checks for username and password matching to db
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -86,12 +88,12 @@ def login():
 
     return render_template("login.html")
 
-
+# 
 def confirm_password():
     if confirm_password != password:
         flash("Passwords do not match!")
 
-
+# pulls logged in users username from db to display on profile page
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the sessions user's username from the db
@@ -102,7 +104,7 @@ def profile(username):
 
     return redirect(url_for("login"))
 
-
+# logout function for user
 @app.route("/logout")
 def logout():
     # remove user from session cookies
@@ -110,7 +112,7 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
-
+# adds a workout when the user fills in the form and submits
 @app.route("/add_workout", methods=["GET", "POST"])
 def add_workout():
     if request.method == "POST":
@@ -130,7 +132,7 @@ def add_workout():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_workout.html", categories=categories)
 
-
+# edits a workout when the user makes changes and submits
 @app.route("/edit_workout/<workout_id>", methods=["GET", "POST"])
 def edit_workout(workout_id):
     if request.method == "POST":
@@ -150,20 +152,20 @@ def edit_workout(workout_id):
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_workout.html", workout=workout, categories=categories)
 
-
+# 'done' button function for completing workout
 @app.route("/complete_workout/<workout_id>")
 def complete_workout(workout_id):
     mongo.db.tasks.delete_one({"_id": ObjectId(workout_id)})
     flash("Workout Successfully Completed")
     return redirect(url_for("get_tasks"))
 
-
+# appears for admin user to display all categories listed
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
 
-
+# allows an admin user to add a category to the database
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if request.method == "POST":
@@ -174,7 +176,7 @@ def add_category():
 
     return render_template("add_category.html")
 
-
+# allows admin to edit a category
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
     if request.method == "POST":
@@ -186,7 +188,7 @@ def edit_category(category_id):
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     return render_template("edit_category.html", category=category)
 
-
+# allows admin to delete a category
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
@@ -195,4 +197,4 @@ def delete_category(category_id):
 
 
 if __name__ == "__main__":
-    app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=True)
+    app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=False)
