@@ -65,7 +65,7 @@ Below is a mockup image of the WorkoutCrew application created using the "Am I R
 - The colours used are as follows:-
 
 - `#ffffff` used for primary text.
-- `#de5d83` used for the header, footer, card panels and icons.
+- `#880e4f` used for the header, footer, card panels and icons.
 - `#000000` used for secondary text and edit buttons.
 - `#20b2aa` used for 'done' button.
 - `#0, 0, 0, 0.5` used for text shadows.
@@ -74,7 +74,7 @@ I have used CSS `:root` variables to easily update the global colour scheme by c
 
 ```css
 :root {
-    --dark-pink: #de5d83;
+    --dark-pink: #880e4f;
     --light-pink: #ffe6ee;
     --light-green: #20b2aa;
     --black: #000;
