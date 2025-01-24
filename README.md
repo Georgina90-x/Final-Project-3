@@ -132,7 +132,6 @@ I have used CSS `:root` variables to easily update the global colour scheme by c
 
 | Feature | Description | Screenshot |
 | :---: | :---: | :---: |
-| **About WorkoutCrew** | The 'About WorkoutCrew' button opens a modal that gives a little information about the site and it's creator. | ![screenshot]() |
 | **Popout Dropdowns** | The popout dropdowns on the homepage display each workout with the category, exercises and date. If the owner of the workout is logged in, they have the option to edit/delete that workout. | ![screenshot](documentation/features/popout-dropdown.png) |
 | **Search Box** | The search box is located at the top of the main page for users to be able to search the database with specific queries. They can search for categories and specific exercises. | ![screenshot](documentation/features/searchbox.png) |
 | **Card Panel Categories** | Admin users can access/manage the categories that users can select when adding a workout to the database. | ![screenshot](documentation/features/card-panel-categories.png) | !
@@ -200,6 +199,7 @@ The following are credits to various people and technologies that have directly 
 | [MongoDB](https://www.mongodb.com) | Database | Used database to store, add, edit and update data. |
 | [Flaticon](https://www.flaticon.com/free-icons/sports-and-competition) | Favicon | Used as the favicon for the application. |
 | [Udacity](https://www.udacity.com/blog/2021/03/creating-an-html-404-error-web-page.html) | 404 Page | Used to create an Error 404 page. |
+| [LucidChart](https://www.lucid.app) | README | Used to create a Use Case & Database Schema Diagram. |
 
 ### Acknowledgements
 
