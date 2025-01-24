@@ -139,3 +139,17 @@ nav .workout-title {
 .icon, .user {
     color: var(--dark-pink);
 }
+
+/* styles for modal box */
+.modal {
+    color: var(--black);
+    text-align: center;
+    background-color: var(--light-pink);
+    text-shadow: none;
+}
+
+.modal .modal-footer {
+    position: center;
+    align-items: center;
+    justify-content: center;
+}
