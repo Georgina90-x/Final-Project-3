@@ -25,6 +25,8 @@
 
 - [New site Users](#new-site-users)
 - [Returning Site Users](#returning-site-users)
+- [Use Case Diagram](#use-case-diagram)
+- [Database Schema] (#database-schema)
 
 [Wireframes](#wireframes)
 
@@ -106,6 +108,16 @@ I have used CSS `:root` variables to easily update the global colour scheme by c
 - As a returning site user, I would like to search the database for specific exercises.
 - As a returning site user, I would like to be able to change/edit/delete the workouts I have added.
 - As a returning site user, I would like to be able to sign in with ease.
+
+### Use Case Diagram
+| UML Use Case Diagram |
+| :---: |
+| ![screenshot](documentation/users/loggedin-user-admin-use-case-chart.png) | 
+
+### Database Schema
+| Database Schema |
+| :---: |
+| ![screenshot](documentation/users/database-schema.png) | 
 
 ## Wireframes
 
