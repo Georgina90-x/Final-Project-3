@@ -156,13 +156,31 @@ The following are bugs that I have come across while creating the Workout site.
 - To fix this I removed the 'multiple' from the select boxes and had it as a 'choose one' category. This is a temporary fix as workouts often combine multiple categories and users may find this frustrating.
 ***
 
-- Issues with modals for delete confirmations. - When pressing the delete/done buttons a modal should appear for the user to confirm they want to delete the record or cancel. This content was not covered in the provided course content so I had to figure out how to get the code working with my existing code. When I would put the code in, it would affect the entire application from working.
+- Issues with modals for delete confirmations. - When pressing the delete/done buttons a modal should appear for the user to confirm they want to delete the record or cancel. 
 
 | Original image | Bug fixed image |
 | :---: | :---: |
 | ![screenshot](documentation/bugs/done-workout.png) | ![screenshot]() |
 
-- To fix this I persevered trying to find the right code that would get the modal working and allowing a confirmation to take place to avoid accidental deletions.
+- To fix this I managed to find a simple code of a modal to put in the  html pages and javascript without the need for complex code in python.
+***
+
+- When confirming deletion with either Modal, the first record would be deleted instead of the record selected.
+
+| Original image | Bug fixed image |
+| :---: | :---: |
+| ![screenshot](documentation/bugs/done-workout.png) | ![screenshot]() |
+
+- I checked that the injected link would delete by ID without a modal, which it did.
+***
+
+- When clicking cancel in the modal box, the page directs to a 'URL not found'
+
+| Original image | Bug fixed image |
+| :---: | :---: |
+| ![screenshot](documentation/bugs/url-not-found.png) | ![screenshot]() |
+
+- I attempted to fix this by putting a {{ url_for() }} of the page to redirect to, but this did not work.
 ***
 
 ## Unfixed Bugs
