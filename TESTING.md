@@ -64,7 +64,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 ## Browser Compatibility
 
-I have tested Your Weather on the following browsers to check for compatibility issues.
+I have tested WorkoutCrew on the following browsers to check for compatibility issues.
 
 | Browser | Main | Login | Register | New Workout | Categories | Edit Category | Profile |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -169,26 +169,19 @@ The following are bugs that I have come across while creating the Workout site.
 
 | Original image | Bug fixed image |
 | :---: | :---: |
-| ![screenshot](documentation/bugs/done-workout.png) | ![screenshot]() |
+| ![screenshot](documentation/bugs/done-workout.png) | ![screenshot](documentation/bugs/bug-modal-confirmation.png) |
 
-- I checked that the injected link would delete by ID without a modal, which it did.
+- I checked that the injected link would delete by ID without a modal, which it did. The issue was with the links in the modal itself which needed to target each ID rather than just the first ID.
 ***
 
 - When clicking cancel in the modal box, the page directs to a 'URL not found'
 
 | Original image | Bug fixed image |
 | :---: | :---: |
-| ![screenshot](documentation/bugs/url-not-found.png) | ![screenshot]() |
+| ![screenshot](documentation/bugs/url-not-found.png) | ![screenshot](documentation/bugs/bug-modal-cancellation.png) |
 
-- I attempted to fix this by putting a {{ url_for() }} of the page to redirect to, but this did not work.
+- I attempted to fix this by putting a {{ url_for() }} of the page to redirect to, but this did not work. The href needed to be # and the modal-footer needed to be the class.
 ***
-
-## Unfixed Bugs
-
-| Error | Screenshot | Description |
-| :---: | :---: | :---: |
-| Permission policy error - Chrome devtools gives this google floc warning on the version that I am using. It appears to be a deprecated trial for data collection instead of using cookies. | ![screenshot](documentation/bugs/google-floc-warning.png) | I was unsuccessful at fixing this, however this does not affect the operation of the site and this trial operation is also blocked by GitHub as it breaks privacy policy. |
-| The 404 page does not pick up the css if an error is created on the end of a .html url. | e.g. boderg.github.io/your-weather/index.html/data ![screenshot](documentation/bugs/html-error.png) | I was unable to fix this error but the 404 error does appear and the link button does work to return to the main page. I feel this is acceptable as it is an unlikely scenario to enter a url in this fashion. |
 
 There are no remaining bugs that I am aware of.
 

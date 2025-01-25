@@ -89,7 +89,7 @@ I have used CSS `:root` variables to easily update the global colour scheme by c
 - I used the Google Font called 'Special Elite' for the WorkoutCrew site.
 - I wanted a typewriter element to match the feeling of 'inputting of data' to a database.
 
-- [Play](https://fonts.google.com/specimen/Special+Elite) was used for all text within the site.
+- [Special Elite](https://fonts.google.com/specimen/Special+Elite) was used for all text within the site.
 
 - [Font Awesome](https://fontawesome.com) icons were used in the WorkoutCrew site.
 
