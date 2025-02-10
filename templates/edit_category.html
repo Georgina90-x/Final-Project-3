@@ -18,9 +18,19 @@
             <a href="{{ url_for('get_categories') }}" class="btn-large pink text-shadow">
             Cancel <i class="fas fa-times-circle right"></i>
             </a>
-            <button type="submit" class="btn-large black text-shadow">
-            Edit Category <i class="fas fa-edit right"></i>
-            </button>
+            <a href="#modal-{{ category._id }}" class="btn-large black modal-trigger">Edit<i class="fas fa-pencil right"></i>
+            </a>
+            <!-- Modal Edit -->
+            <div id="modal-{{ category._id }}" class="modal black-text center-align">
+               <div class="modal-content center-align">
+                  <h4>Are you sure you want to edit this Category?</h4>
+               </div>
+               <div class="modal-footer">
+                  <button type="submit" class="btn red">Edit <i class="fas fa-edit right"></i>
+                  </button>
+                  <a href="#" class="btn green modal-close">Cancel</a>
+               </div>
+            </div> 
          </div>
       </div>
    </form>

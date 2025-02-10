@@ -138,7 +138,7 @@ def edit_workout(workout_id):
     if request.method == "POST":
         is_urgent = "on" if request.form.get("is_urgent") else "off"
         submit = {
-            "category_name": request.form.getlist("category_name"),
+            "category_name": request.form.get("category_name"),
             "workout_name": request.form.get("workout_name"),
             "workout_description": request.form.get("workout_description"),
             "is_urgent": is_urgent,
@@ -147,6 +147,7 @@ def edit_workout(workout_id):
         }
         mongo.db.tasks.update_one({"_id": ObjectId(workout_id)}, {"$set": submit})
         flash("Workout Successfully Updated")
+        return redirect(url_for("get_tasks"))
 
     workout = mongo.db.tasks.find_one({"_id": ObjectId(workout_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
