@@ -118,7 +118,7 @@ def add_workout():
     if request.method == "POST":
         is_urgent = "on" if request.form.get("is_urgent") else "off"
         workout = {
-            "category_name": request.form.getlist("category_name"),
+            "category_name": request.form.get("category_name"),
             "workout_name": request.form.get("workout_name"),
             "workout_description": request.form.get("workout_description"),
             "is_urgent": is_urgent,
